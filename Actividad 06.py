@@ -23,6 +23,11 @@ def calcular_promedio_notas(suma, cantidad):
     else:
         resultado = 0
     return resultado
+def mostrar_el_numero_mayor_y_menor(mayor, menor):
+    print("el numero mayor es: ", mayor)
+    print("El numero menor es: ", menor)
+
+
 while True:
     print("\n ---MENU---")
     print("1. Ingresar n numeros y mostrar")
@@ -65,3 +70,19 @@ while True:
                 notas= float(input("Ingrese sus notas "))
                 adittion += notas
             print(f"El promedio de las calificaciones es: {calcular_promedio_notas(adittion, calificacion)}")
+        case "5":
+            print("\n --Mostrar el mayor y menor de los numeros ingresados")
+            cantidad_numeros = int(input("Ingrese que cantidad de numeros va a ingresar "))
+            if cantidad_numeros ==0:
+                print("Debe ingresar un numero ")
+            else :
+                numero = float(input("Ingrese un numero "))
+                mayor = numero
+                menor = numero
+                for i in range (1, cantidad_numeros):
+                    numero = float(input("Ingrese un numero "))
+                    if numero > mayor:
+                        mayor=numero
+                    if numero < menor:
+                        menor=numero
+                mostrar_el_numero_mayor_y_menor(mayor, menor)
