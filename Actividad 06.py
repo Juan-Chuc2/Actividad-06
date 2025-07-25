@@ -17,6 +17,12 @@ def calcular_el_area_de_triangulo(base, altura):
     return base*altura/2
 def calcular_si_numero_es_par_o_impar(number_):
     return number_ % 2 == 0
+def calcular_promedio_notas(suma, cantidad):
+    if cantidad != 0:
+        resultado = suma/cantidad
+    else:
+        resultado = 0
+    return resultado
 while True:
     print("\n ---MENU---")
     print("1. Ingresar n numeros y mostrar")
@@ -51,3 +57,11 @@ while True:
                 print("El numero que Usted ingreso es par")
             else:
                 print("El numero que Usted ingreso es impar")
+        case "4":
+            print("\n --Calculo de promedio de calificaciones--")
+            calificacion = int(input("Ingrese el numero de calificaciones que se va a calcular "))
+            adittion = 0
+            for i in range(calificacion):
+                notas= float(input("Ingrese sus notas "))
+                adittion += notas
+            print(f"El promedio de las calificaciones es: {calcular_promedio_notas(adittion, calificacion)}")
