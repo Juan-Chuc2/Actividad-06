@@ -15,6 +15,8 @@ def contar_positivos_negativos(numbers):
     return positivos, negativos
 def calcular_el_area_de_triangulo(base, altura):
     return base*altura/2
+def calcular_si_numero_es_par_o_impar(number_):
+    return number_ % 2 == 0
 while True:
     print("\n ---MENU---")
     print("1. Ingresar n numeros y mostrar")
@@ -42,3 +44,10 @@ while True:
             base = float(input("Ingrese la medida de la base "))
             altura = float(input("Ingrese la medida de la altura del triangulo "))
             print(f"El area del triangulo es: {calcular_el_area_de_triangulo(base,altura)}")
+        case "3":
+            print("\n --Numero par o impar--")
+            number_ = int(input("Ingrese el numero que desea verificar "))
+            if calcular_si_numero_es_par_o_impar(number_):
+                print("El numero que Usted ingreso es par")
+            else:
+                print("El numero que Usted ingreso es impar")
