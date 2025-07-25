@@ -27,7 +27,7 @@ def mostrar_el_numero_mayor_y_menor(mayor, menor):
     print("el numero mayor es: ", mayor)
     print("El numero menor es: ", menor)
 
-
+saludar()
 while True:
     print("\n ---MENU---")
     print("1. Ingresar n numeros y mostrar")
@@ -86,3 +86,8 @@ while True:
                     if numero < menor:
                         menor=numero
                 mostrar_el_numero_mayor_y_menor(mayor, menor)
+        case "6":
+            print("Gracias por usar el programa de operaciones matematicas")
+            break
+        case _:
+            print("Usted ingreso un dato no valido, vuelva a intentarlo")
